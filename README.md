@@ -138,7 +138,7 @@ https://note.com/salmoon
 
 ### AWS
 
-- AWS Certified Generative AI Engineer - Professional
+- AWS Certified Generative AI Developer - Professional
 - AWS Certified Machine Learning Engineer - Associate
 - AWS Certified Data Engineer - Associate
 - AWS Certified Solutions Architect - Associate
