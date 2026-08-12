@@ -33,12 +33,50 @@ AI を単体技術として扱うのではなく、システム・データ基�
 
 ## 個人開発プロジェクト
 
-### 1. AI Home Work Wellness Agent
+### 1. AI Business Insight Agent
+
+Amazon Bedrock AgentCore / FastAPI / Athena を活用した、  
+販売データ分析 AI Agent です。
+
+#### 1-1. 概要
+
+自然言語による質問から AI Agent が販売データを分析し、  
+営業・経営インサイトを返す AI Web アプリケーションを開発しています。
+
+#### 1-2. 現在実装済み
+
+- FastAPI による REST API / Session 管理
+- AgentCore Runtime による継続会話
+- S3 / Glue Data Catalog / Athena による分析基盤
+- AgentCore Gateway / MCP Tool
+- Agent によるテーブル一覧・スキーマ取得
+- Text2SQL による Athena 分析
+- SELECT のみに制限した Tool 側の安全制御
+
+現在は、自然言語の質問から Agent が必要なテーブル・スキーマを調査し、  
+SQLを生成して Athena の分析結果を返すところまで実装しています。
+
+#### 1-3. 今後の予定
+
+- AgentCore Observability による Tool Call / Text2SQL の可視化
+- 現在のデータ構造とスタースキーマの Text2SQL 比較検証
+- React フロントエンド
+- Memory / Identity / Policy
+- Code Interpreter / Evaluations
+
+#### 1-4. 各種リンク
+
+- GitHub: https://github.com/Saxon-Pi/agentcore-business-insight-agent
+- Blog: https://note.com/salmoon/n/n2fd1c7d2c869
+
+---
+
+### 2. AI Home Work Wellness Agent
 
 AIエージェントを活用した、  
 在宅ワーカー向けの健康支援を目的としたシステムです。  
 
-#### 1-1. 概要
+#### 2-1. 概要
 
 主に以下の技術を使用して、  
 ユーザーの健康状態や生活習慣をサポートする AIエージェントを構築しました。  
@@ -49,25 +87,25 @@ AIエージェントを活用した、
 - MCP
 - LINE Messaging API
 
-#### 1-2. 特徴
+#### 2-2. 特徴
 
 - AgentCore Gateway による MCP統合・ツール管理
 - CO2 濃度などのセンサデータ基盤の構築と AI Agent への接続
 - LINE を利用した実運用を想定したインターフェース設計
 
-#### 1-3. 各種リンク
+#### 2-3. 各種リンク
 
 - GitHub: https://github.com/Saxon-Pi/ai-home-work-wellness-agent
 - Blog: https://note.com/salmoon/n/nb7155f780c98
 
 ---
 
-### 2. AI SRE Assistant
+### 3. AI SRE Assistant
 
 生成AI を活用した、  
 システム障害発生時の原因分析や対応支援を行うシステムです。  
 
-#### 2-1. 概要
+#### 3-1. 概要
 
 主に以下の技術を使用して、  
 エラーの観測事象・原因仮説・推奨アクションを段階的に生成して通知するシステムを構築しました。  
@@ -77,25 +115,25 @@ AIエージェントを活用した、
 - Prompt Chaining
 - Agent Loop
 
-#### 2-2. 特徴
+#### 3-2. 特徴
 
 - Prompt Chaining による複数 LLM のオーケストレーション
 - Agent Loop による回答の信頼度ベースの再推論フローの構築
 - 保守運用を想定した回答品質評価と継続改善の仕組みを設計
 
-#### 2-3. 各種リンク
+#### 3-3. 各種リンク
 
 - GitHub: https://github.com/Saxon-Pi/ai-sre-assistant
 - Blog: https://note.com/salmoon/n/n7672b25f08e0
 
 ---
 
-### 3. Kuma Detection System
+### 4. Kuma Detection System
 
 画像検出AI を活用した、  
 クマを検出して通知するシステムです。  
 
-#### 3-1. 概要
+#### 4-1. 概要
 
 主に以下の技術を使用して、  
 監視カメラ映像からリアルタイムにクマを検出するシステムを構築しました。  
@@ -104,13 +142,13 @@ AIエージェントを活用した、
 - Kinesis Video Streams
 - Kinesis Data Streams
 
-#### 3-2. 特徴
+#### 4-2. 特徴
 
 - AWSサービスを活用したリアルタイム画像解析
 - Kinesis Video Streams / Data Streams を活用したストリーミングデータ基盤設計
 - 拡張性を考慮したイベント駆動アーキテクチャ
 
-#### 3-3. 各種リンク
+#### 4-3. 各種リンク
 
 - GitHub: https://github.com/Saxon-Pi/kuma-detection-cdk
 - Blog: https://note.com/salmoon/n/n3004dfc242b5
